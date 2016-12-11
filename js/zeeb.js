@@ -1,0 +1,13 @@
+$(document).ready(function(){
+	$("#kirim").click(function(){
+		url=$("#url").val()
+		$.ajax({
+			url:"proses.php",
+			type:"POST",
+			data:"url="+url,
+			success:function(result){
+				$("#hasil").html(result)
+			}
+		})
+	})
+})
